@@ -39,12 +39,22 @@
 		
 		<form id="signup">
 		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
+    window.onload = function() {
+        document.body.classList.remove('is-preload');
 
-			function scrollToSection(sectionId) {
-				var section = document.getElementById(sectionId);
-				section.scrollIntoView({ behavior: 'smooth' });
-			}
-		</script>
+        // Add event listener to the "Register now" link
+        var registerLink = document.querySelector('a[href="#signup"]');
+        registerLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior (changing the URL)
+            scrollToSection('signup');
+        });
+    }
+
+    function scrollToSection(sectionId) {
+        var section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
 	</body>
 </html>

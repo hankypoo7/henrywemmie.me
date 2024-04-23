@@ -126,7 +126,7 @@
 
 	body {
 		background: _palette(bg);
-		overflow: hidden;
+		overflow: scroll;
 
 		// Stops initial animations until page loads.
 			&.is-preload {
@@ -163,7 +163,7 @@
 
 	.icon {
 		@include icon;
-		position: relative;
+		position: static;
 
 		> .label {
 			display: none;
@@ -194,7 +194,7 @@
 		height: 100%;
 		left: 0;
 		opacity: 0;
-		position: fixed;
+		position: static;
 		top: 0;
 		width: 100%;
 	}
@@ -213,7 +213,7 @@
 		height: 100%;
 		left: 0;
 		opacity: 1;
-		position: fixed;
+		position: static;
 		top: 0;
 	}
 
@@ -236,7 +236,7 @@
 		height: 100%;
 		left: 0;
 		opacity: 0;
-		position: fixed;
+		position: static;
 		top: 0;
 		width: 100%;
 	}
@@ -246,7 +246,7 @@
 	#main {
 		height: 100%;
 		left: 0;
-		position: fixed;
+		position: static;
 		text-align: center;
 		top: 0;
 		width: 100%;
@@ -280,7 +280,7 @@
 		cursor: default;
 		display: inline-block;
 		opacity: 0;
-		position: relative;
+		position: static;
 		text-align: center;
 		top: -1em;
 		vertical-align: middle;
@@ -310,7 +310,7 @@
 				height: _size(nav-icon-wrapper);
 				line-height: _size(nav-icon-wrapper) * 1.1;
 				opacity: 0;
-				position: relative;
+				position: static;
 				top: 0;
 				width: _size(nav-icon-wrapper);
 
@@ -335,7 +335,7 @@
 					font-size: _size(nav-icon);
 					height: 2.5em;
 					line-height: 2.5em;
-					position: relative;
+					position: static;
 					text-align: center;
 					top: 0;
 					width: 2.5em;
@@ -376,7 +376,7 @@
 		height: 6em;
 		left: 0;
 		line-height: 8em;
-		position: absolute;
+		position: static;
 		text-align: center;
 		width: 100%;
 	}

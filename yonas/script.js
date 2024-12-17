@@ -1,7 +1,7 @@
 let cookies = 0;
-let power = 1;
+let power = 0;
 let powerCost = 10;
-let upgrades = 0;
+let upgrades = 1;
 let clickUPGcost = 10000;
 
 function clicked() {

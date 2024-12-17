@@ -1,40 +1,44 @@
 let cookies = 0;
 let power = 0;
 let powerCost = 10;
-let upgrades = 1
-let clickUPGcost = 10000
+let upgrades = 1;
+let clickUPGcost = 10000;
 
 function clicked() {
-    if (power === 0) {
-        cookies += 1;
-    } else {
-        cookies += power;
-    }
+    // Add cookies based on power and upgrades
+    cookies += power + upgrades;
     document.getElementById("cookiesText").innerHTML = cookies;
+    document.getElementById("powerPerClickText").innerHTML = power + upgrades; // Update power per click
 }
 
 function powerBuy() {
     if (cookies >= powerCost) {
-        power += 1;
-        cookies -= cost;
-        powerCost = 10 * (1 + (power * 0.1));
+        power += 1; // Increase power
+        cookies -= powerCost; // Deduct cost
+        powerCost = Math.floor(powerCost * 1.3); // Update cost
+
+        // Update DOM
         document.getElementById("cookiesText").innerHTML = cookies;
-        document.getElementById("powerPerClickText").innerHTML = power;  // Power per click on the left
-        document.getElementById("costText").innerHTML = Math.floor(powerCost);  // Update cost text
-        document.getElementById("powerOwnedText").innerHTML = power;  // Owned power in the sidebar
+        document.getElementById("powerCostText").innerHTML = powerCost;
+        document.getElementById("powerOwnedText").innerHTML = power;
+        document.getElementById("powerPerClickText").innerHTML = power + upgrades;
     } else {
-        console.log('Not enough cookies!');
+        console.log('Not enough cookies for Power Upgrade!');
     }
 }
 
-function clickUPG(){
+function clickUPG() {
     if (cookies >= clickUPGcost) {
-        upgrades += 1;
-        cookies -= clickUPGcost;
-        clickUPGcost *= 3.5;
+        upgrades += 1; // Increase upgrades
+        cookies -= clickUPGcost; // Deduct cost
+        clickUPGcost = Math.floor(clickUPGcost * 2.5); // Update cost
+
+        // Update DOM
         document.getElementById("cookiesText").innerHTML = cookies;
-        document.getElementById("powerPerClickText").innerHTML = power;
+        document.getElementById("boostCostText").innerHTML = clickUPGcost;
+        document.getElementById("boostOwnedText").innerHTML = upgrades;
+        document.getElementById("powerPerClickText").innerHTML = power + upgrades;
     } else {
-        console.log('Not enough cookies!');
+        console.log('Not enough cookies for Boost Upgrade!');
     }
 }

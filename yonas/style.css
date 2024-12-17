@@ -1,0 +1,117 @@
+/* Basic body styling */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container styling */
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    height: 100vh;
+}
+
+/* Center the section with cookie and power information */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Header and paragraph styling */
+h1 {
+    color: #444;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Cookie click button styling */
+.click-button {
+    background-color: #e67e22;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.click-button img {
+    vertical-align: middle;
+}
+
+.click-button:hover {
+    background-color: #d35400;
+}
+
+.click-button:active {
+    background-color: #c0392b;
+}
+
+/* Sidebar styling with black border */
+.sidebar {
+    width: 250px;
+    background-color: #ddd;
+    padding: 20px;
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+}
+
+/* Upgrade button styling in the sidebar */
+.upgrade-button {
+    display: flex;
+    align-items: center;
+    background-color: #666;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+.upgrade-button:hover {
+    background-color: #555;
+}
+
+.upgrade-button img.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 22px;
+}
+
+.cost, .owned {
+    font-size: 18px;
+    color: #00FF00;
+}
+
+#cookiesText, #powerText, #costText {
+    font-weight: bold;
+    color: #27ae60;
+}

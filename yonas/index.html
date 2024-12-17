@@ -13,42 +13,41 @@
             <center>
                 <h1>Yonas Clicker</h1>
 
-                <p>Yonas's <span id="cookiesText">0</span></p>
-                <p>Power/Yonas's per click: <span id="powerPerClickText">0</span></p>
+                <p>Total Yonas's: <span id="cookiesText">0</span></p>
+                <p>Power/Yonas's per click: <span id="powerPerClickText">1</span></p>
 
                 <button class="click-button" onclick="clicked()">
-                    <img src="cookie.png" alt="cookiepng" width="100" height="100"/>
+                    <img src="cookie.png" alt="cookie" width="100" height="100"/>
                 </button>
             </center>
         </div>
 
-        <!-- Sidebar with power upgrades on the right -->
+        <!-- Sidebar with power upgrades -->
         <div class="sidebar">
             <h2>Upgrades</h2>
 
+            <!-- Power Upgrade -->
             <div class="upgrade-button" onclick="powerBuy()">
                 <img src="cursor.png" alt="Power Icon" class="icon" />
                 <div class="info">
                     <span class="title">Power</span>
-                    <span class="cost">Cost: <span id="costText">10</span></span>
+                    <span class="cost">Cost: <span id="powerCostText">10</span></span>
                     <p>Owned: <span id="powerOwnedText">0</span></p>
                 </div>
             </div>
 
+            <!-- Boost Upgrade -->
             <div class="upgrade-button" onclick="clickUPG()">
-                <img src="cursor.png" alt="Power Icon" class="icon" />
+                <img src="cursor.png" alt="Boost Icon" class="icon" />
                 <div class="info">
-                    <span class="title">boost</span>
-                    <span class="cost">Cost: <span id="costText">idk yet</span></span>
-                    <p>Owned: <span id="powerOwnedText">0</span></p>
+                    <span class="title">Boost</span>
+                    <span class="cost">Cost: <span id="boostCostText">10000</span></span>
+                    <p>Owned: <span id="boostOwnedText">1</span></p>
                 </div>
             </div>
-
-            <!-- sidebar things -->
-            
         </div>
-
-        <script src="script.js"></script>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
